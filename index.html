@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Guru</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md relative z-10">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex items-center justify-between sm:items-stretch">
+                    <div class="flex-shrink-0 flex items-center mobile-logo-margin">
+                        <span class="text-xl font-semibold">Grant Guru</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <div class="flex space-x-4 justify-center">
+                            <a href="/about" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="/features" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                            <a href="/services" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        </div>
+                    </div>
+                    <div class="hidden sm:flex items-center">
+                        <a href="/demo" class="gradient-bg text-white px-3 py-2 rounded-md text-sm font-medium">Use</a>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center sm:hidden hamburger-container">
+                    <label for="check" class="hamburger-label cursor-pointer flex flex-col items-start">
+                        <input type="checkbox" id="check" class="hidden"/>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:hidden absolute top-16 left-0 w-full bg-white shadow-md" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/about" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="/features" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                <a href="/services" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="/demo" class="gradient-bg text-white block px-3 py-2 rounded-md text-base font-medium">Use</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
+            <div class="mr-auto place-self-center lg:col-span-7">
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
+                    Empowering First-Gen <br> Students for Success
+                </h1>
+                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+                    Discover Grant Guru, your one-stop solution for financial aid resources tailored specifically for first-generation low-income students.
+                </p>
+            </div>
+            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <img src="./assets/final-hero.png" alt="Grant Guru Hero Image">
+            </div>                
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Our Services</h2>
+                <p class="text-xl text-gray-600">Explore the tools and resources we offer to help you succeed.</p>
+            </div>
+            <div class="lg:grid lg:grid-cols-3 lg:gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-2">Scholarship and Grant Database</h2>
+                    <p class="text-gray-700">Searchable and filterable database of scholarships and grants.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
+                    <h2 class="text-2xl font-bold mb-2">Financial Aid Application Assistance</h2>
+                    <p class="text-gray-700">Step-by-step guides for FAFSA and CSS Profile applications, document checklists, and sample essays.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
+                    <h2 class="text-2xl font-bold mb-2">Loan Information and Management</h2>
+                    <p class="text-gray-700">Loan comparison tool, repayment calculator, and loan forgiveness information.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
+                    <h2 class="text-2xl font-bold mb-2">Budgeting and Financial Planning Tools</h2>
+                    <p class="text-gray-700">Budget planner, expense tracker, and savings goal tracker.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
+                    <h2 class="text-2xl font-bold mb-2">Internship and Job Search</h2>
+                    <p class="text-gray-700">Job board, application tracker, and resume/cover letter templates.</p>
+                    <a href="/ijs" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
+                    <h2 class="text-2xl font-bold mb-2">Events and Workshops</h2>
+                    <p class="text-gray-700">Schedule of upcoming financial aid workshops and webinars, event registration, and resource library.</p>
+                    <a href="https://financialaidtoolkit.ed.gov/tk/training.jsp#federal-student-aid-training" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-gray-800">
+        <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="/about" class="hover:underline">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="mailto:s@naai.nz" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="/privacy" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="/terms" class="hover:underline">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+            <div class="text-center">
+                <a href="/" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+                    Grant Guru    
+                </a>
+                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024 Grant Guru</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('check').addEventListener('change', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (this.checked) {
+                menu.style.maxHeight = menu.scrollHeight + "px";
+            } else {
+                menu.style.maxHeight = null;
+            }
+        });
+    </script>
+</body>
+</html>
