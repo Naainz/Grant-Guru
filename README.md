@@ -33,7 +33,7 @@ GrantGuru is a comprehensive platform designed to provide first-generation low-i
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/grant-guru.git
+    git clone https://github.com/Naainz/grant-guru.git
     ```
 2. Navigate to the project directory:
     ```sh
