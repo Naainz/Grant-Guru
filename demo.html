@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Grant Guru</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+
+        .message.user {
+            background-color: #e0f7fa;
+            align-self: flex-end;
+            text-align: right;
+        }
+
+        .message.ai {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md relative z-10">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex items-center justify-between sm:items-stretch">
+                    <div class="flex-shrink-0 flex items-center mobile-logo-margin">
+                        <span class="text-xl font-semibold">Grant Guru</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <div class="flex space-x-4 justify-center">
+                            <a href="/about" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="./.#features" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                            <a href="/forum" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Forum</a>
+                        </div>
+                    </div>
+                    <div class="hidden sm:flex items-center">
+                        <a href="/demo" class="gradient-bg text-white px-3 py-2 rounded-md text-sm font-medium">Use</a>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center sm:hidden hamburger-container">
+                    <label for="check" class="hamburger-label cursor-pointer flex flex-col items-start">
+                        <input type="checkbox" id="check" class="hidden"/>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:hidden absolute top-16 left-0 w-full bg-white shadow-md" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/about" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="./.#features" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                <a href="/forum" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Forum</a>
+                <a href="/demo" class="gradient-bg text-white block px-3 py-2 rounded-md text-base font-medium">Use</a>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-white dark:bg-gray-900 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white">Demo</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Chat with our AI for student financial information.</p>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                <div id="ai-response" class="message-container mb-4">
+                    <div class="message ai fade-in">
+                        <p><strong>GrantGuru Assistant:</strong> Hi, how can I help you today?</p>
+                    </div>
+                </div>
+                <textarea id="user-input" class="w-full h-40 p-4 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Type your message here..."></textarea>
+                <button id="send-btn" class="mt-4 w-full gradient-bg text-white p-3 rounded-md">Send</button>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-white dark:bg-gray-800">
+        <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="/about" class="hover:underline">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="mailto:s@naai.nz" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="/privacy" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="/terms" class="hover:underline">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+            <div class="text-center">
+                <a href="/" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+                    Grant Guru    
+                </a>
+                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024 Grant Guru</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('send-btn').addEventListener('click', async function() {
+            const userInput = document.getElementById('user-input').value;
+            const aiResponseContainer = document.getElementById('ai-response');
+    
+            // Check for tags in the input message
+            if (!userInput || /<[^>]*>/.test(userInput)) {
+                alert('Invalid input. Please avoid using tags "<>".');
+                return;
+            }
+    
+            const userMessageElement = document.createElement('div');
+            userMessageElement.classList.add('message', 'user', 'fade-in');
+            userMessageElement.innerHTML = `<p><strong>You:</strong> ${userInput}</p>`;
+            aiResponseContainer.appendChild(userMessageElement);
+    
+            try {
+                const response = await fetch('process_message.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userInput })
+                });
+    
+                const data = await response.json();
+                const aiMessageElement = document.createElement('div');
+                aiMessageElement.classList.add('message', 'ai', 'fade-in');
+                aiMessageElement.innerHTML = `<p><strong>GrantGuru Assistant:</strong> ${data.response}</p>`;
+                aiResponseContainer.appendChild(aiMessageElement);
+    
+            } catch (error) {
+                console.error('Error:', error);
+                const aiMessageElement = document.createElement('div');
+                aiMessageElement.classList.add('message', 'ai', 'fade-in');
+                aiMessageElement.innerHTML = `<p><strong>GrantGuru Assistant:</strong> Sorry, an error occurred. Please try again later.</p>`;
+                aiResponseContainer.appendChild(aiMessageElement);
+            }
+    
+            document.getElementById('user-input').value = '';
+        });
+    
+        document.getElementById('user-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('send-btn').click();
+            }
+        });
+    </script>
+    
+</body>
+</html>
