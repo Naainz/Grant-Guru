@@ -1,0 +1,18 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+body {
+    font-family: 'Satoshi', sans-serif;
+}
+.gradient-text {
+    background: -webkit-linear-gradient(45deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-bg {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+@media (max-width: 640px) {
+    .mobile-logo-margin {
+        margin-left: 20px;
+    }
+}

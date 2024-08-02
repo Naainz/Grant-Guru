@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grant Guru</title>
+    <title>Loan Information and Management - Grant Guru</title>
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="bg-gray-50">
     <nav class="bg-white shadow-md relative z-10">
@@ -37,7 +38,6 @@
                 </div>
             </div>
         </div>
-
         <div class="sm:hidden absolute top-16 left-0 w-full bg-white shadow-md" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="/about" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
@@ -47,64 +47,45 @@
             </div>
         </div>
     </nav>
-
-    <section class="bg-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
-                    Empowering First-Gen <br> Students for Success
-                </h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    Discover Grant Guru, your one-stop solution for financial aid resources tailored specifically for first-generation low-income students.
-                </p>
-            </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="./assets/final-hero.png" alt="Grant Guru Hero Image">
-            </div>                
-        </div>
-    </section>
-
-    <section class="bg-gray-50 py-12" id="features">
+    <section class="bg-white dark:bg-gray-900 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Our Services</h2>
-                <p class="text-xl text-gray-600">Explore the tools and resources we offer to help you succeed.</p>
+                <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white">Loan Information and Management</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Compare loans, calculate repayments, and explore forgiveness options.</p>
             </div>
-            <div class="lg:grid lg:grid-cols-3 lg:gap-6">
+            <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                <form id="loanForm" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <label for="amount" class="block text-sm font-medium text-gray-700">Loan Amount</label>
+                        <input type="number" id="amount" name="amount" class="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="interest" class="block text-sm font-medium text-gray-700">Interest Rate (%)</label>
+                        <input type="number" id="interest" name="interest" class="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="term" class="block text-sm font-medium text-gray-700">Term (Years)</label>
+                        <input type="number" id="term" name="term" class="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+                    <div class="sm:col-span-2 lg:col-span-3">
+                        <button type="submit" class="w-full gradient-bg text-white p-3 rounded-md">Calculate</button>
+                    </div>
+                </form>
+            </div>
+            <div id="results" class="mt-12"></div>
+            <div id="forgiveness" class="mt-12">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-2">Scholarship and Grant Database</h2>
-                    <p class="text-gray-700">Searchable and filterable database of scholarships and grants.</p>
-                    <a href="https://accessscholarships.com/scholarship-directory/" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Financial Aid Application Assistance</h2>
-                    <p class="text-gray-700">Step-by-step guides for FAFSA and CSS Profile applications and document checklists</p>
-                    <a href="/faaa" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Loan Information and Management</h2>
-                    <p class="text-gray-700">Loan comparison tool, repayment calculator, and loan forgiveness information.</p>
-                    <a href="/loan-info" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Budgeting and Financial Planning Tools</h2>
-                    <p class="text-gray-700">Budget planner, expense tracker, and savings goal tracker.</p>
-                    <a href="/budget" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Internship and Job Search</h2>
-                    <p class="text-gray-700">Job board, application tracker, and resume/cover letter templates.</p>
-                    <a href="/ijs" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Events and Workshops</h2>
-                    <p class="text-gray-700">Schedule of upcoming financial aid workshops and webinars, event registration, and resource library.</p>
-                    <a href="https://financialaidtoolkit.ed.gov/tk/training.jsp#federal-student-aid-training" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+                    <h2 class="text-2xl font-bold mb-2">Loan Forgiveness Options</h2>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li><strong>Public Service Loan Forgiveness (PSLF):</strong> Forgives the remaining balance on Direct Loans after 120 qualifying monthly payments under a qualifying repayment plan while working full-time for a qualifying employer.</li>
+                        <li><strong>Teacher Loan Forgiveness:</strong> Forgives up to $17,500 on Direct Subsidized and Unsubsidized Loans and Subsidized and Unsubsidized Federal Stafford Loans after five complete and consecutive years of teaching full-time in low-income schools and educational service agencies.</li>
+                        <li><strong>Income-Driven Repayment (IDR) Forgiveness:</strong> Forgives the remaining balance on your loan if you haven't repaid your loan in full after 20 or 25 years, depending on the IDR plan.</li>
+                    </ul>
+                    <p class="text-gray-700 mt-4">For more detailed information and eligibility criteria, visit the <a href="https://studentaid.gov/manage-loans/forgiveness-cancellation" class="text-blue-500 hover:underline" target="_blank">Federal Student Aid website</a>.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="bg-white dark:bg-gray-800">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
@@ -145,7 +126,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         document.getElementById('check').addEventListener('change', function() {
             const menu = document.getElementById('mobile-menu');
@@ -154,6 +134,28 @@
             } else {
                 menu.style.maxHeight = null;
             }
+        });
+
+        document.getElementById('loanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const amount = parseFloat(document.getElementById('amount').value);
+            const interest = parseFloat(document.getElementById('interest').value) / 100 / 12;
+            const term = parseFloat(document.getElementById('term').value) * 12;
+
+            const monthlyPayment = (amount * interest) / (1 - Math.pow(1 + interest, -term));
+            const totalPayment = monthlyPayment * term;
+            const totalInterest = totalPayment - amount;
+
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = `
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-2">Loan Repayment Summary</h2>
+                    <p class="text-gray-700 mb-4">Loan Amount: $${amount.toFixed(2)}</p>
+                    <p class="text-gray-700 mb-4">Monthly Payment: $${monthlyPayment.toFixed(2)}</p>
+                    <p class="text-gray-700 mb-4">Total Payment: $${totalPayment.toFixed(2)}</p>
+                    <p class="text-gray-700">Total Interest: $${totalInterest.toFixed(2)}</p>
+                </div>
+            `;
         });
     </script>
 </body>

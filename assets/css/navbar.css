@@ -1,0 +1,61 @@
+.hamburger-label {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    cursor: pointer;
+}
+
+.hamburger-container {
+    transform: scale(0.6); 
+    transform-origin: center; 
+}
+
+.hamburger-label span {
+    background: #333;
+    border-radius: 10px;
+    height: 7px;
+    margin: 7px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.hamburger-label span:nth-of-type(1) {
+    width: 50%;
+}
+
+.hamburger-label span:nth-of-type(2) {
+    width: 100%;
+}
+
+.hamburger-label span:nth-of-type(3) {
+    width: 75%;
+}
+
+.hamburger-label input[type="checkbox"] {
+    display: none;
+}
+
+.hamburger-label input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(8px, 0px);
+}
+
+.hamburger-label input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg);
+}
+
+.hamburger-label input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(30px, -11px) rotatez(45deg);
+}
+
+#mobile-menu {
+    transition: max-height 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    max-height: 0;
+    overflow: hidden;
+}
+
+#check:checked ~ #mobile-menu {
+    max-height: 500px; /* Adjust as needed to fit content */
+}

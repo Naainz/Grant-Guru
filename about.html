@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grant Guru</title>
+    <title>About Us - Grant Guru</title>
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body class="bg-gray-50">
+    <!-- Navbar -->
     <nav class="bg-white shadow-md relative z-10">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
@@ -28,6 +29,7 @@
                     </div>
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center sm:hidden hamburger-container">
+                    <!-- Mobile menu button-->
                     <label for="check" class="hamburger-label cursor-pointer flex flex-col items-start">
                         <input type="checkbox" id="check" class="hidden"/>
                         <span></span>
@@ -38,6 +40,7 @@
             </div>
         </div>
 
+        <!-- Mobile menu, show/hide based on menu state. -->
         <div class="sm:hidden absolute top-16 left-0 w-full bg-white shadow-md" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="/about" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
@@ -48,63 +51,36 @@
         </div>
     </nav>
 
-    <section class="bg-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
-                    Empowering First-Gen <br> Students for Success
-                </h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    Discover Grant Guru, your one-stop solution for financial aid resources tailored specifically for first-generation low-income students.
-                </p>
-            </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="./assets/final-hero.png" alt="Grant Guru Hero Image">
-            </div>                
-        </div>
-    </section>
-
-    <section class="bg-gray-50 py-12" id="features">
+    <!-- About Us Section -->
+    <section class="bg-white dark:bg-gray-900 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Our Services</h2>
-                <p class="text-xl text-gray-600">Explore the tools and resources we offer to help you succeed.</p>
+                <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white">About Grant Guru</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Empowering First-Generation Students for Financial Success</p>
             </div>
-            <div class="lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-2">Scholarship and Grant Database</h2>
-                    <p class="text-gray-700">Searchable and filterable database of scholarships and grants.</p>
-                    <a href="https://accessscholarships.com/scholarship-directory/" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Financial Aid Application Assistance</h2>
-                    <p class="text-gray-700">Step-by-step guides for FAFSA and CSS Profile applications and document checklists</p>
-                    <a href="/faaa" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Loan Information and Management</h2>
-                    <p class="text-gray-700">Loan comparison tool, repayment calculator, and loan forgiveness information.</p>
-                    <a href="/loan-info" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Budgeting and Financial Planning Tools</h2>
-                    <p class="text-gray-700">Budget planner, expense tracker, and savings goal tracker.</p>
-                    <a href="/budget" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Internship and Job Search</h2>
-                    <p class="text-gray-700">Job board, application tracker, and resume/cover letter templates.</p>
-                    <a href="/ijs" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg mt-6 lg:mt-0">
-                    <h2 class="text-2xl font-bold mb-2">Events and Workshops</h2>
-                    <p class="text-gray-700">Schedule of upcoming financial aid workshops and webinars, event registration, and resource library.</p>
-                    <a href="https://financialaidtoolkit.ed.gov/tk/training.jsp#federal-student-aid-training" class="text-blue-500 hover:underline mt-4 inline-block">Try it Now</a>
+            <div class="lg:grid lg:grid-cols-1 lg:gap-6">
+                <div class="lg:col-span-1">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h2>
+                    <p class="text-gray-700 dark:text-gray-400 mb-6">
+                        At Grant Guru, our mission is to empower first-generation low-income students by providing them with the tools and resources they need to achieve financial success. We believe that every student deserves the opportunity to pursue higher education without the burden of financial constraints.
+                    </p>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">What We Offer</h2>
+                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-400">
+                        <li>Searchable and filterable database of scholarships and grants.</li>
+                        <li>Step-by-step guides for FAFSA and CSS Profile applications and document</li>
+                        <li>Loan comparison tool, repayment calculator, and loan forgiveness information.</li>
+                        <li>Budget planner, expense tracker, and savings goal tracker.</li>
+                        <li>Educational articles, video tutorials, and interactive quizzes on financial topics.</li>
+                        <li>A simple to use Q&A Forum.</li>
+                        <li>Student stories, peer mentoring, and discussion forums.</li>
+                        <li>Schedule of upcoming financial aid workshops and webinars, event registration, and resource library.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="bg-white dark:bg-gray-800">
         <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
             <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
